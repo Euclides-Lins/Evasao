@@ -23,7 +23,7 @@ export class EvasionComponent implements OnInit {
   defasagem = 0.11111
   constructor(private routes: Router, private service: EvasionService) { }
 
-  displayedColumns: string[] = ['name','apaty', 'familyProblems', 'fullHour', 'identity','inattendance','isFar','isPregnent','isVulnerable', 'notLearning'];
+  displayedColumns: string[] = ['name','apaty', 'familyProblems', 'fullHour', 'identity','inattendance','isFar','isPregnent','isVulnerable', 'notLearning', 'actions'];
   dataSource = new MatTableDataSource<any>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -50,4 +50,12 @@ export class EvasionComponent implements OnInit {
     this.routes.navigate(['evasion/charts'])
   }
 
+  deleteDepartment(department){
+    this.service.deleteDepartment(department).subscribe(()=>{
+
+    })
+    alert("Departamento Deletado!");
+    window.location.reload();
+    this.routes.navigate(['evasion/charts'])
+  }
 }

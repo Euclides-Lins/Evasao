@@ -24,4 +24,9 @@ export class EvasionService {
     return this.httpCliente.post<any>(this.url, JSON.stringify(chart), this.httpOptions)
   }
 
+  deleteDepartment(chart) {
+    return this.httpCliente.delete<any>(this.url+'/'+chart.id, this.httpOptions);
+  }
+
+
 }
