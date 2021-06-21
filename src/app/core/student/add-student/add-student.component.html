@@ -1,0 +1,84 @@
+<mat-card>
+  <mat-card-title>
+    Inserir Aluno
+  </mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form" >
+      <div class="input-group" >
+        <mat-form-field >
+          <input
+              formControlName="nome"
+              matInput
+              placeholder="nome"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="cpf"
+              matInput
+              placeholder="cpf"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="cep"
+              matInput
+              placeholder="cep"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="rg"
+              matInput
+              placeholder="rg"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="matricula"
+              matInput
+              placeholder="matricula"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="uf"
+              matInput
+              placeholder="uf"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="cidade"
+              matInput
+              placeholder="cidade"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="curso"
+              matInput
+              placeholder="curso"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="endereco"
+              matInput
+              placeholder="endereco"
+            />
+        </mat-form-field>
+      </div>
+    </form>
+    <mat-card-actions>
+      <div class="mt" >
+        <button class="mr-4" mat-stroked-button (click)="clear()" >
+          Clear
+        </button>
+        <button mat-flat-button color="primary" (click)="save()">
+          Inserir
+        </button>
+      </div>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,23 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-nav-list>
+      <div id="image">
+        <img src="../../assets//1200px-Instituto_Federal_Marca_2015.svg.png" alt="">
+      </div>
+      <button [routerLink]="['']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Cursos</button>
+      <button [routerLink]="['/campus']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Campus</button>
+      <button [routerLink]="['/department']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Departmentos</button>
+      <button [routerLink]="['/student']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Aluno</button>
+      <button [routerLink]="['/evasion']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Evasão</button>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="menu" color="primary">
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,59 @@
+{
+  "cursos": [
+    {
+      "nome": "Teste",
+      "sigla": "Teste",
+      "departamento": "teste",
+      "alunos": "teste",
+      "id": 7
+    },
+    {
+      "nome": "Tecnologia em análise e desenvolvimento de sistemas",
+      "sigla": "TADS",
+      "departamento": "DAIC",
+      "alunos": "Luiz, Euclides .....",
+      "id": 8
+    }
+  ],
+  "campus": [
+    {
+      "nome": "Teste",
+      "departamentos": "Teste",
+      "usuarios": "teste, teste, teste, teste, teste",
+      "sigla": "test",
+      "id": 8
+    }
+  ],
+  "departamento": [
+    {
+      "nome": "Teste",
+      "sigla": "teste",
+      "campus": "teste",
+      "cursos": "teste",
+      "usuarios": "teste",
+      "id": 6
+    },
+    {
+      "nome": "teste",
+      "sigla": "e",
+      "campus": "test",
+      "cursos": "tes",
+      "usuarios": "teste",
+      "id": 7
+    }
+  ],
+  "alunos": [
+    {
+      "nome": "test",
+      "cpf": "test",
+      "cep": "123",
+      "rg": "345",
+      "matricula": "2345",
+      "endereco": "teste",
+      "uf": "am",
+      "cidade": "manaus",
+      "curso": "teste",
+      "id": 1
+    }
+  ]
+}

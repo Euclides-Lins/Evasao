@@ -1,0 +1,49 @@
+.table {
+  margin-left: 5%;
+  width: 90%;
+  margin-top: 4%;
+}
+
+table {
+  width: 100%;
+}
+
+.up {
+  margin-left: 5%;
+  margin-top: 30px;
+  width: 90%;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.text-title {
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+  background-color: #372d5c;
+}
+
+.button-group {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+h1 {
+  padding-top: 1.5%;
+  text-align: center;
+  color: white  ;
+}
+
+button {
+  background-color: #372d5c;
+  color: white;
+  border-radius: 30%;
+}
+
+.button {
+  background-color: transparent;
+  color: gray;
+  border: none;
+}

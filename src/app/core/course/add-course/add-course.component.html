@@ -1,0 +1,51 @@
+<mat-card>
+  <mat-card-title>
+    <p>
+      Inserir Curso
+    </p>
+  </mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form" >
+      <div class="input-group" >
+        <mat-form-field >
+          <input
+              formControlName="nome"
+              matInput
+              placeholder="nome"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="sigla"
+              matInput
+              placeholder="sigla"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="departamento"
+              matInput
+              placeholder="departamento"
+            />
+        </mat-form-field>
+        <mat-form-field >
+          <input
+              formControlName="alunos"
+              matInput
+              placeholder="alunos"
+            />
+        </mat-form-field>
+      </div>
+    </form>
+    <mat-card-actions>
+      <div class="mt" >
+        <button class="mr-4" mat-stroked-button (click)="clear()" >
+          Clear
+        </button>
+        <button mat-flat-button color="primary" (click)="save()">
+          Inserir
+        </button>
+      </div>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

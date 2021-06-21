@@ -1,0 +1,32 @@
+mat-form-field {
+  display: block;
+  margin-top: 7%;
+  width: 90%;
+}
+
+p {
+  margin-top: 5%;
+}
+
+mat-card {
+  height: 60%;
+  width: 40%;
+  position: absolute;
+  top: 20%;
+  left: 27%;
+}
+.input-group {
+  margin-left: 10%;
+}
+
+button:last-child {
+
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+.mt {
+  display: flex;
+  justify-content:flex-end;
+  width: 90%;
+}
