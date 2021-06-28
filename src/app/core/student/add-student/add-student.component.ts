@@ -21,16 +21,17 @@ export class AddStudentComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
+    console.log(localStorage.getItem('aluno'));
     this.form = this.formBuilder.group({
-      vulneravel: ['', [Validators.required]],
-      distancia: ['', [Validators.required]],
-      gravidez: ['', [Validators.required]],
-      cargaHoraria: ['', [Validators.required]],
-      identidade: ['', [Validators.required]],
-      inassiduidade: ['', [Validators.required]],
-      apatia: ['', [Validators.required]],
-      problemas: ['', [Validators.required]],
-      defasagem: ['', [Validators.required]],
+      nome: ['', [Validators.required]],
+      cpf: ['', [Validators.required]],
+      cep: ['', [Validators.required]],
+      rg: ['', [Validators.required]],
+      matricula: ['', [Validators.required]],
+      uf: ['', [Validators.required]],
+      curso: ['', [Validators.required]],
+      endereco: ['', [Validators.required]],
+      cidade: ['', [Validators.required]]
     })
   }
 

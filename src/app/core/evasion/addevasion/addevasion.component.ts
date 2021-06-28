@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Chart } from 'chart.js';
 import { EvasionService } from '../evasion.service';
 
 @Component({
@@ -9,6 +8,8 @@ import { EvasionService } from '../evasion.service';
   templateUrl: './addevasion.component.html',
   styleUrls: ['./addevasion.component.css']
 })
+
+
 export class AddevasionComponent implements OnInit {
 
 
@@ -22,33 +23,33 @@ export class AddevasionComponent implements OnInit {
    }
    ngOnInit(): void {
      this.form = this.formBuilder.group({
-      nome: ['', [Validators.required]],
-      vulnerabilidade: ['', [Validators.required]],
-      distancia: ['', [Validators.required]],
-      gravidez: ['', [Validators.required]],
-      cargaHoraria: ['', [Validators.required]],
-      Identidade: ['', [Validators.required]],
-      Insassiduidade: ['', [Validators.required]],
-      Apatia: ['', [Validators.required]],
-      familiares: ['', [Validators.required]],
-      defasagem: ['', [Validators.required]],
+      name: ['', [Validators.required]],
+      isVulnerable: ['', [Validators.required]],
+      isFar: ['', [Validators.required]],
+      isPregnent: ['', [Validators.required]],
+      fullHour: ['', [Validators.required]],
+      identity: ['', [Validators.required]],
+      inattendance: ['', [Validators.required]],
+      apaty: ['', [Validators.required]],
+      familyProblems: ['', [Validators.required]],
+      notLearning: ['', [Validators.required]],
     })
 
 
 
   }
 
-   save() {
+   save(){
     const formValue = this.form.value;
     console.log(formValue);
 
-    this.service.saveStudent(formValue).subscribe(response => {
+    return this.service.saveStudent(formValue).subscribe(response => {
+      response.id = localStorage.getItem('aluno')
       this.department.push(response);
-      console.log((this.department));
+      alert("Departamento Cadastrado!")
+      this.router.navigate(['/evasion'])
     })
 
-    alert("Departamento Cadastrado!")
-    this.router.navigate(['/evasion'])
    }
 
   clear(){

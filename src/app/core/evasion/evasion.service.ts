@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EvasionService {
 
-  url = 'http://localhost:8080/api/charts';
+  url = 'http://localhost:3000/charts';
   constructor(private httpCliente: HttpClient) { }
 
   httpOptions = {

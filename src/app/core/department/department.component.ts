@@ -15,9 +15,12 @@ export class DepartmentComponent{
   displayedColumns: string[] = ['nome', 'sigla', 'campus', 'cursos','usuarios', 'actions'];
   dataSource = new MatTableDataSource<any>();
 
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngAfterViewInit() {
+
+    console.log(this.dataSource);
 
     this.getDepartment()
     this.dataSource.paginator = this.paginator;
@@ -29,9 +32,23 @@ export class DepartmentComponent{
 
   getDepartment(){
     this.departmentService.getCampus().subscribe((department)=> {
+      console.log(department);
+
+
+      department.forEach(department => {
+        if(department.nome == 'DAIC') {
+          localStorage.setItem('departamento', department.nome);
+        }
+      } )
       this.dataSource = department
     })
   }
+
+  getIdFromTable(rowid){
+    localStorage.setItem('aluno', rowid);
+    this.routes.navigate(['evasion'])
+  }
+
   deleteDepartment(department){
     this.departmentService.deleteDepartment(department).subscribe(()=>{
 
@@ -39,4 +56,6 @@ export class DepartmentComponent{
     alert("Departamento Deletado!");
     window.location.reload();
   }
+
+  cardStorage() {}
 }

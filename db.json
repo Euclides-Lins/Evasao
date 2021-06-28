@@ -6,54 +6,94 @@
       "departamento": "teste",
       "alunos": "teste",
       "id": 7
-    },
-    {
-      "nome": "Tecnologia em análise e desenvolvimento de sistemas",
-      "sigla": "TADS",
-      "departamento": "DAIC",
-      "alunos": "Luiz, Euclides .....",
-      "id": 8
     }
   ],
   "campus": [
     {
-      "nome": "Teste",
-      "departamentos": "Teste",
-      "usuarios": "teste, teste, teste, teste, teste",
-      "sigla": "test",
-      "id": 8
+      "nome": "Campus manaus Centro",
+      "departamentos": "DAIC",
+      "usuarios": "Euclides Luiz",
+      "sigla": "CMC",
+      "id": 1
+    },
+    {
+      "nome": "Campus manaus Centro",
+      "departamentos": "DAIC",
+      "usuarios": "Luiz",
+      "sigla": "CMC",
+      "id": 2
     }
   ],
   "departamento": [
     {
-      "nome": "Teste",
-      "sigla": "teste",
-      "campus": "teste",
-      "cursos": "teste",
-      "usuarios": "teste",
-      "id": 6
+      "nome": "Departamento Acadêmico de Informação e Comunicação",
+      "sigla": "DAIC",
+      "campus": "CMC",
+      "cursos": "TADS",
+      "usuarios": "Euclides",
+      "id": 1
     },
     {
-      "nome": "teste",
-      "sigla": "e",
-      "campus": "test",
-      "cursos": "tes",
-      "usuarios": "teste",
-      "id": 7
+      "nome": "DAINFRA",
+      "sigla": "DINF",
+      "campus": "Campus Manus Centro",
+      "cursos": "Engenharia civil",
+      "usuarios": "Euclides Luiz",
+      "id": 2
     }
   ],
   "alunos": [
     {
-      "nome": "test",
-      "cpf": "test",
-      "cep": "123",
-      "rg": "345",
-      "matricula": "2345",
-      "endereco": "teste",
+      "nome": "Euclides",
+      "cpf": "123",
+      "cep": "1212",
+      "rg": "1212",
+      "matricula": "2112",
       "uf": "am",
-      "cidade": "manaus",
       "curso": "teste",
+      "endereco": "testonildo-teste",
+      "cidade": "manaus",
       "id": 1
+    },
+    {
+      "nome": "teste",
+      "cpf": "123213",
+      "cep": "123213",
+      "rg": "23123",
+      "matricula": "2020005984",
+      "uf": "am ",
+      "curso": "lkjsadflkjs",
+      "endereco": "askljlfkj",
+      "cidade": "manaus",
+      "id": 2
+    }
+  ],
+  "charts": [
+    {
+      "name": "euclides",
+      "isVulnerable": 0,
+      "isFar": 0,
+      "isPregnent": 1,
+      "fullHour": 1,
+      "identity": 0,
+      "inattendance": 0,
+      "apaty": 1,
+      "familyProblems": 1,
+      "notLearning": 0,
+      "id": 1
+    },
+    {
+      "name": "teste",
+      "isVulnerable": 0,
+      "isFar": 0,
+      "isPregnent": 0,
+      "fullHour": 0,
+      "identity": 0,
+      "inattendance": 1,
+      "apaty": 1,
+      "familyProblems": 0,
+      "notLearning": 0,
+      "id": 2
     }
   ]
 }

@@ -14,7 +14,7 @@ export class StudentComponent {
 
 
   constructor(private routes: Router, private studentService: StudentService){}
-  displayedColumns: string[] = ['nome', 'matricula', 'identidade', 'cpf','cep','endereco','uf','cidade', 'rg', 'actions'];
+  displayedColumns: string[] = ['nome', 'matricula', 'cpf','cep','endereco','uf','cidade', 'rg', 'actions'];
   dataSource = new MatTableDataSource<any>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -28,11 +28,18 @@ export class StudentComponent {
     this.routes.navigate(['/student/addstudent'])
   }
 
+  addButtonEvasion(){
+    this.routes.navigate(['evasion/addevasion'])
+  }
+
+  getIdFromTable(rowid){
+    localStorage.setItem('aluno', rowid);
+    this.routes.navigate(['evasion/charts'])
+  }
 
   getStudent() {
     this.studentService.getStudent().subscribe((student)=>{
       this.dataSource = student;
-      console.log(this.dataSource);
 
     })
   }

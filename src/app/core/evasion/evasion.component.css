@@ -94,3 +94,9 @@ table {
   color: gray;
   border: none;
 }
+
+.flex {
+  width: 60%;
+  padding: 10%;
+  padding-left: 15%;
+}
