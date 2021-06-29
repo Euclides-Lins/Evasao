@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --watch",
+    "start": "node server",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng deploy"
   },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.2.0",
