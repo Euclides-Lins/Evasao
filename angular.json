@@ -63,9 +63,6 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "allowedCommonJsDependencies": [
-              "lodash"
-           ],
             "browserTarget": "front:build",
             "port": 6969
           },
