@@ -4,13 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "clear": "npm cache clean --force",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy",
-    "heroku-postbuild": "ng build --prod"
+    "deploy": "ng deploy"
   },
   "engines": {
     "node": "12.4.0",
