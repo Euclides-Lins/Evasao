@@ -20,6 +20,7 @@ export class CampusComponent  {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngAfterViewInit() {
+    localStorage.removeItem("porcentagem")
     this.dataSource.paginator = this.paginator;
     this.getCampus()
   }

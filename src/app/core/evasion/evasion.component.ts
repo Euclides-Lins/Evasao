@@ -13,13 +13,13 @@ import { EvasionService } from './evasion.service';
 export class EvasionComponent implements OnInit {
   //Departamento Acadêmico de Informação e Comunicação
   vulnerabilidade =1.0
-  distancia = 1.0
+  distancia = 0
   gravidez = 1.0
-  cargaHoraria = 1.0
+  cargaHoraria = 0
   Identidade = 1.0
-  Insassiduidade = 1.0
+  Insassiduidade = 0
   Apatia = 1.0
-  familiares = 1.0
+  familiares = 0
 
   defasagem = 1.0
   constructor(private routes: Router, private service: EvasionService) { }

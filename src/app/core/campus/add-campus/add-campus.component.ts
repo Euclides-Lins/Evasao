@@ -34,7 +34,7 @@ export class AddCampusComponent implements OnInit {
       console.log(this.campus);
 
     })
-    alert("Usuario Cadastrado!")
+    alert("Campus Cadastrado!")
     this.router.navigate(['/campus'])
 
   }

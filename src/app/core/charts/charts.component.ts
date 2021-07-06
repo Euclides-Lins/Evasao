@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js'
 import { EvasionService } from '../evasion/evasion.service';
@@ -18,30 +19,23 @@ export class ChartsComponent implements OnInit {
     Apatia = 0.11113
     familiares = 0.44448
     defasagem = 0.11111
+    aux
   constructor(private service: EvasionService) { }
   ngOnInit() {
-     this.getData();
-     const name = localStorage.getItem('aluno')
-     console.log(name)
+    const name = localStorage.getItem('aluno')
      this.service.getOneStudent(name).subscribe((charts)=> {
-       console.log(this.defasagem)
-       this.defasagem = charts.isVulnerable * this.defasagem;
-       console.log(this.defasagem)
-       this.distancia = charts.isFar * this.distancia;
-       this.gravidez = charts.isPregnent * this.gravidez;
-       this.Identidade = charts.identity * this.Identidade;
-       this.Insassiduidade = charts.inattendance * this.Insassiduidade;
-       this.Apatia  = charts.apaty * this.Apatia;
-       this.familiares = charts.familyProblems * this.familiares;
-       this.defasagem = charts.notLearning * this.defasagem;
-     })
+       console.log(charts);
+     this.aux = charts.isVulnerable * this.vulnerabilidade + charts.isFar * this.distancia + charts.isPregnent* this.gravidez + charts.fullHour*this.cargaHoraria + charts.identity*this.Identidade + charts.inattendance* this.Insassiduidade + charts.apaty*this.Apatia + charts.familyProblems * this.familiares + charts.notLearning * this.defasagem + 0.0006
+     this.aux = ((this.aux /2.00074)* 100).toFixed(2)
+    localStorage.setItem("porcentagem", this.aux.toString());
+
      var myChart = new Chart("lanvas", {
       type: 'bar',
       data: {
           labels: ['Vulnerabilidade social', 'Distância', 'Gravidez', 'Carga horária', 'Identidade', 'Insassiduidade', 'Apatia', 'Problemas Familiares', 'Defasagem no aprendizado'],
           datasets: [{
               label: '# De Vulnerabilidade',
-              data: [this.vulnerabilidade, this.distancia, this.gravidez, this.cargaHoraria, this.Identidade, this.Insassiduidade, this.Apatia, this.familiares, this.defasagem, 0.5 ],
+              data: [this.vulnerabilidade * charts.isVulnerable, this.distancia*charts.isFar, this.gravidez*charts.isPregnent, this.cargaHoraria*charts.fullHour, this.Identidade*charts.identity, this.Insassiduidade*charts.inattendance, this.Apatia * charts.apaty, this.familiares*charts.familyProblems, this.defasagem*charts.notLearning, 0.5 ],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -62,7 +56,7 @@ export class ChartsComponent implements OnInit {
             }]
           },
         });
-
+      })
     }
 
 

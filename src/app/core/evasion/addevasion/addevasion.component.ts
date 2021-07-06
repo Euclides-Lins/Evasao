@@ -46,8 +46,8 @@ export class AddevasionComponent implements OnInit {
     return this.service.saveStudent(formValue).subscribe(response => {
       response.id = localStorage.getItem('aluno')
       this.department.push(response);
-      alert("Departamento Cadastrado!")
-      this.router.navigate(['/evasion'])
+      alert("Evasão Cadastrada!")
+      this.router.navigate(['/student'])
     })
 
    }

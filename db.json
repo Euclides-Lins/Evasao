@@ -1,98 +1,71 @@
 {
   "cursos": [
     {
-      "nome": "Teste",
-      "sigla": "Teste",
-      "departamento": "teste",
-      "alunos": "teste",
-      "id": 7
+      "nome": "Tecnologia em Análise e desenvolvimento de sistemas",
+      "sigla": "TADS",
+      "departamento": "DAIC",
+      "alunos": "Euclides, Luiz, Júlia",
+      "id": 1
     }
   ],
   "campus": [
     {
-      "nome": "Campus manaus Centro",
+      "nome": "Campus Manaus Centro",
       "departamentos": "DAIC",
-      "usuarios": "Euclides Luiz",
+      "usuarios": "Júla, Euclides",
       "sigla": "CMC",
       "id": 1
-    },
-    {
-      "nome": "Campus manaus Centro",
-      "departamentos": "DAIC",
-      "usuarios": "Luiz",
-      "sigla": "CMC",
-      "id": 2
     }
   ],
   "departamento": [
     {
-      "nome": "Departamento Acadêmico de Informação e Comunicação",
+      "nome": "Departamento acadêmico de informação e Comunicação",
       "sigla": "DAIC",
-      "campus": "CMC",
+      "campus": "Campus Manaus Centro",
       "cursos": "TADS",
-      "usuarios": "Euclides",
+      "usuarios": "Euclides, Júlia, Luiz",
       "id": 1
-    },
-    {
-      "nome": "DAINFRA",
-      "sigla": "DINF",
-      "campus": "Campus Manus Centro",
-      "cursos": "Engenharia civil",
-      "usuarios": "Euclides Luiz",
-      "id": 2
     }
   ],
   "alunos": [
     {
       "nome": "Euclides",
-      "cpf": "123",
-      "cep": "1212",
-      "rg": "1212",
-      "matricula": "2112",
-      "uf": "am",
-      "curso": "teste",
-      "endereco": "testonildo-teste",
-      "cidade": "manaus",
+      "cpf": "09876",
+      "cep": "12345",
+      "rg": "678910",
+      "matricula": "0987654",
+      "uf": "AM",
+      "curso": "TADS",
+      "endereco": "Conjunto 0, rua 0, casa 0",
+      "cidade": "Manaus",
       "id": 1
-    },
-    {
-      "nome": "teste",
-      "cpf": "123213",
-      "cep": "123213",
-      "rg": "23123",
-      "matricula": "2020005984",
-      "uf": "am ",
-      "curso": "lkjsadflkjs",
-      "endereco": "askljlfkj",
-      "cidade": "manaus",
-      "id": 2
     }
   ],
   "charts": [
     {
-      "name": "euclides",
-      "isVulnerable": 0,
+      "name": "Euclides",
+      "isVulnerable": 1,
       "isFar": 0,
       "isPregnent": 1,
-      "fullHour": 1,
-      "identity": 0,
+      "fullHour": 0,
+      "identity": 1,
       "inattendance": 0,
       "apaty": 1,
-      "familyProblems": 1,
-      "notLearning": 0,
+      "familyProblems": 0,
+      "notLearning": 1,
       "id": 1
     },
     {
-      "name": "teste",
-      "isVulnerable": 0,
+      "name": "Euclides",
+      "isVulnerable": 1,
       "isFar": 0,
-      "isPregnent": 0,
+      "isPregnent": 1,
       "fullHour": 0,
-      "identity": 0,
-      "inattendance": 1,
+      "identity": 1,
+      "inattendance": 0,
       "apaty": 1,
       "familyProblems": 0,
-      "notLearning": 0,
+      "notLearning": 1,
       "id": 2
     }
   ]

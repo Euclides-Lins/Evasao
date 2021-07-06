@@ -14,7 +14,7 @@ export class StudentComponent {
 
 
   constructor(private routes: Router, private studentService: StudentService){}
-  displayedColumns: string[] = ['nome', 'matricula', 'cpf','cep','endereco','uf','cidade', 'rg', 'actions'];
+  displayedColumns: string[] = ['nome', 'matricula', 'cpf','cep','endereco','uf','cidade', 'rg', 'probabilidade','actions'];
   dataSource = new MatTableDataSource<any>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -39,6 +39,11 @@ export class StudentComponent {
 
   getStudent() {
     this.studentService.getStudent().subscribe((student)=>{
+
+      student.forEach(response => {
+        response.probabilidade = localStorage.getItem("porcentagem");
+
+      })
       this.dataSource = student;
 
     })

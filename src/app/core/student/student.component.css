@@ -46,3 +46,13 @@ button {
   color: gray;
   border: none;
 }
+
+
+.prob {
+  color: green;
+}
+
+
+th .prob{
+  color: green;
+}
