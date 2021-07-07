@@ -34,4 +34,9 @@ img {
 
 .menu {
   background-color: #372d5c;
+  height: 10%;
+}
+
+.end {
+  margin-left: 50%;
 }

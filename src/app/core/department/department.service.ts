@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DepartmentService {
-  url = 'http://localhost:3001/departamento';
+  url = 'http://localhost:3000/departamento';
   constructor(private httpCliente: HttpClient) { }
 
   httpOptions = {

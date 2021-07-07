@@ -9,14 +9,18 @@
       </div>
       <button [routerLink]="['']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Cursos</button>
       <button [routerLink]="['/campus']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Campus</button>
-      <button [routerLink]="['/department']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Departmentos</button>
+      <button [routerLink]="['/department']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Departamentos</button>
       <button [routerLink]="['/student']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Aluno</button>
       <button [routerLink]="['/evasion']" mat-raised-button color="basic" class="btn"><mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <br> Evasão</button>
 
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
+
     <mat-toolbar class="menu" color="primary">
+      Portal de Evasão Escolar
+
+      <p class="end">Produto educacional do mestrado ProfEPT do discente Júlia Angélica <br>Orientador Daniel Nascimento <br> Colaboradores: Euclides Lins, Luiz Francisco</p>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
