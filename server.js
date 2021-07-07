@@ -18,5 +18,5 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname + '/dist/front/index.html'))
 })
 
-server.listen(3000)
+server.listen(process.env.PORT || 3000);
 app.listen(process.env.PORT, '0.0.0.0')
