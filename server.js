@@ -6,7 +6,7 @@ const app = express()
 const middleware = jsonServer.defaults();
 
 server.use(middleware);
-server.use(router);
+//server.use(router);
 
 
 app.use(express.static(__dirname+ '/dist/front'));
@@ -16,5 +16,5 @@ app.get('/*', (req, res) => {
 })
 
 
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
 app.listen(process.env.PORT, '0.0.0.0')
