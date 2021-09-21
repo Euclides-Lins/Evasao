@@ -19,5 +19,5 @@ app.get('/*', (req, res) => {
 })
 
 
-server.listen(process.env.PORT || 3000);
+server.listen(3000);
 app.listen(process.env.PORT, '0.0.0.0')
